@@ -1,0 +1,718 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* =========================
+   MAIN / HERO SECTION
+========================= */
+
+.main {
+  height: 80vh;
+  min-height: 600px;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("Asset/image/Ibg.jpg");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  position: relative;
+
+  padding: 10px 8%;
+
+  overflow: hidden;
+}
+
+/* RED CURVE */
+
+.main::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -45px;
+
+  transform: translateX(-50%);
+
+  width: 120%;
+  height: 70px;
+
+  border-top: 4px solid #e50914;
+
+  border-radius: 50% 50% 0 0;
+
+  background:
+    radial-gradient(
+      50% 500% at 50% -420%,
+      rgba(64, 97, 231, 0.4) 80%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    black;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+  width: 100%;
+  height: 90px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 20px 55px;
+
+  position: relative;
+
+  z-index: 10;
+}
+
+/* LOGO */
+
+nav span img {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+
+/* RIGHT SIDE OF NAV */
+
+nav > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ALL NAV BUTTONS */
+
+nav button {
+  border: none;
+  outline: none;
+
+  color: white;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+/* LANGUAGE BUTTON */
+
+.lang {
+  height: 36px;
+
+  padding: 0 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  border: 1px solid #777;
+
+  color: white;
+}
+
+.lang img {
+  width: 16px;
+  height: 16px;
+
+  object-fit: contain;
+
+  filter: brightness(0) invert(1);
+}
+
+.lang img:last-child {
+  width: 10px;
+  height: 10px;
+
+  margin-left: 3px;
+}
+
+/* SIGN IN */
+
+.sign {
+  height: 36px;
+
+  padding: 0 17px;
+
+  background-color: #e50914;
+
+  font-weight: bold;
+}
+
+.sign:hover {
+  background-color: #b20710;
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.headercontaint {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 90%;
+
+  max-width: 950px;
+
+  text-align: center;
+
+  z-index: 5;
+}
+
+/* MAIN HEADING */
+
+.headercontaint h1 {
+  font-size: 56px;
+
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  max-width: 750px;
+
+  margin: 0 auto;
+}
+
+/* SUB HEADING */
+
+.headercontaint h3 {
+  font-size: 20px;
+
+  font-weight: 600;
+
+  margin-top: 24px;
+
+  margin-bottom: 20px;
+}
+
+/* DESCRIPTION */
+
+.headercontaint p {
+  font-size: 16px;
+
+  margin-bottom: 0;
+}
+
+/* =========================
+   EMAIL FORM
+========================= */
+
+.Emailsignup {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 20px;
+}
+
+.Emailsignup input {
+  width: 370px;
+
+  height: 56px;
+
+  padding: 0 16px;
+
+  border-radius: 4px;
+
+  border: 1px solid #777;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  color: white;
+
+  font-size: 16px;
+
+  outline: none;
+}
+
+.Emailsignup input::placeholder {
+  color: #c8c8c8;
+}
+
+/* GET STARTED */
+
+.getstarted {
+  width: 210px;
+
+  height: 56px;
+
+  border: none;
+
+  border-radius: 4px;
+
+  background-color: #e50914;
+
+  color: white;
+
+  font-size: 20px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+.getstarted:hover {
+  background-color: #b20710;
+}
+
+/* =========================
+   MORE REASONS
+========================= */
+
+.container1 {
+  width: 76%;
+
+  max-width: 1200px;
+
+  margin: 70px auto 80px;
+
+  height: auto;
+
+  overflow: visible;
+}
+
+/* TITLE */
+
+.section.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+/* CARD CONTAINER */
+
+.container1 > .section {
+  width: 100%;
+  height: auto;
+  display: inline flex;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 0;
+}
+
+/* =========================
+   REASON CARD
+========================= */
+
+.card {
+  width: 100%;
+  height: 320px;
+  position: relative;
+  padding: 25px 20px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #1d2145 0%, #1e193b 45%, #250c20 100%);
+  display: inline-flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card h3 {
+  font-size: 20px;
+  line-height: 1.25;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #d0d0d0;
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 90px;
+}
+
+/* SMALL IMAGE */
+
+.card .smalllogo {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 20px;
+  bottom: 20px;
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+  display: block;
+}
+
+/* =========================
+   TRENDING NOW
+========================= */
+
+.container2 {
+  width: 76%;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto 90px;
+}
+
+/* TITLE */
+
+.section1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: white;
+}
+
+/* SLIDER */
+
+.slider {
+  width: 100%;
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 10px 10px 25px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* POSTER CARD */
+
+.card1 {
+  position: relative;
+  border-radius: 8px;
+  flex: 0 0 auto;
+  width: 180px;
+
+  height: 300px;
+
+  scroll-snap-align: start;
+
+  overflow: visible;
+
+  transition: transform 0.3s ease;
+}
+
+/* POSTER IMAGE */
+
+.card1 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+
+/* HOVER */
+
+.card1:hover {
+  transform: scale(1.08);
+
+  z-index: 10;
+}
+
+/* NUMBER */
+
+.number {
+  position: absolute;
+  bottom: -10px;
+left: 0px;
+font-size: 90px;
+line-height: 1;
+color: black;
+-webkit-text-stroke: 2px white;
+font-weight: bold;
+z-index: 2;
+}
+
+/* =========================
+   FREQUENTLY ASKED QUESTIONS
+========================= */
+
+.container3 {
+  width: 76%;
+
+  max-width: 1200px;
+
+  height: auto;
+
+  margin: 0 auto 100px;
+}
+
+/* FAQ TITLE */
+
+.section2 {
+  font-size: 24px;
+
+  font-weight: bold;
+
+  margin-bottom: 20px;
+
+  color: white;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* QUESTION BOX */
+
+.questionbox {
+  background-color: #2d2d2d;
+
+  width: 100%;
+
+  height: 85px;
+
+  margin-bottom: 8px;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+}
+
+/* HOVER */
+
+.questionbox:hover {
+  background-color: #414141;
+}
+
+/* QUESTION */
+
+.faq {
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 0 25px;
+
+  font-weight: 400;
+
+  font-size: 24px;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* PLUS ICON */
+
+.faq img {
+  width: 32px;
+
+  height: 32px;
+
+  object-fit: contain;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+/* @media (max-width: 1000px) {
+  nav {
+    padding: 20px 30px;
+  }
+
+  .headercontaint h1 {
+    font-size: 46px;
+  }
+
+  .container1,
+  .container2,
+  .container3 {
+    width: 88%;
+  }
+
+  .container1 > .section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} */
+
+/* =========================
+   MOBILE
+========================= */
+
+/* @media (max-width: 600px) {
+  .main {
+    height: 620px;
+  }
+
+  nav {
+    height: 70px;
+    padding: 15px 20px;
+  }
+
+  nav span img {
+    width: 100px;
+  }
+
+  nav > div {
+    gap: 6px;
+  }
+
+  .lang {
+    height: 32px;
+
+    font-size: 12px;
+
+    padding: 0 7px;
+  }
+
+  .sign {
+    height: 32px;
+
+    padding: 0 12px;
+
+    font-size: 12px;
+  }
+
+  .headercontaint {
+    width: 90%;
+
+    top: 50%;
+  }
+
+  .headercontaint h1 {
+    font-size: 32px;
+
+    line-height: 1.15;
+  }
+
+  .headercontaint h3 {
+    font-size: 16px;
+
+    margin-top: 20px;
+  }
+
+  .headercontaint p {
+    font-size: 14px;
+
+    line-height: 1.4;
+  }
+
+  .Emailsignup {
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 10px;
+  }
+
+  .Emailsignup input {
+    width: 100%;
+
+    height: 52px;
+  }
+
+  .getstarted {
+    width: auto;
+
+    height: 52px;
+
+    padding: 0 20px;
+
+    font-size: 18px;
+  }
+
+  /* MORE REASONS */
+
+  /* .container1,
+  .container2,
+  .container3 {
+    width: 90%;
+  }
+
+  .section.title,
+  .section1,
+  .section2 {
+    font-size: 20px;
+  }
+
+  .container1 > .section {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .card {
+    height: 230px;
+  }
+
+  /* TRENDING */
+
+  /* .slider {
+    gap: 15px;
+
+    padding-left: 5px;
+  }
+
+  .card1 {
+    width: 140px;
+
+    height: 210px;
+  }
+
+  .number {
+    font-size: 65px;
+
+    left: -12px;
+
+    bottom: -8px;
+  }
+
+  /* FAQ */
+
+  /* .questionbox {
+    height: 70px;
+  }
+
+  .faq {
+    font-size: 18px;
+
+    padding: 0 18px;
+  }
+
+  .faq img {
+    width: 26px;
+
+    height: 26px;
+  }
+} */ 
